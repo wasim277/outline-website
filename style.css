@@ -47,9 +47,11 @@ body {
     color: #dc2626;
 }
 
-.nav-logo i {
+.nav-logo-img {
+    width: 30px;
+    height: 30px;
     margin-right: 0.5rem;
-    font-size: 1.8rem;
+    object-fit: contain;
 }
 
 .nav-menu {
@@ -187,6 +189,16 @@ body {
     padding: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .app-header {
@@ -504,9 +516,11 @@ body {
     font-weight: 700;
 }
 
-.footer-logo i {
+.footer-logo-img {
+    width: 25px;
+    height: 25px;
     margin-right: 0.5rem;
-    color: #dc2626;
+    object-fit: contain;
 }
 
 /* Responsive Design */
