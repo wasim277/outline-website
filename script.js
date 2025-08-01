@@ -113,17 +113,41 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Phone mockup animation
-const phoneScreen = document.querySelector('.phone-screen');
-if (phoneScreen) {
-    // Simulate app interaction
-    setInterval(() => {
-        const tabs = document.querySelectorAll('.tab');
-        const randomTab = tabs[Math.floor(Math.random() * tabs.length)];
-        
-        tabs.forEach(tab => tab.classList.remove('active'));
-        randomTab.classList.add('active');
-    }, 3000);
+// Screenshot slideshow functionality
+const screenshots = document.querySelectorAll('.app-screenshot');
+const dots = document.querySelectorAll('.dot');
+let currentSlide = 0;
+
+function showSlide(index) {
+    // Hide all screenshots
+    screenshots.forEach(screenshot => screenshot.classList.remove('active'));
+    // Show current screenshot
+    screenshots[index].classList.add('active');
+    
+    // Update dots
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % screenshots.length;
+    showSlide(currentSlide);
+}
+
+// Auto-advance slides every 3 seconds
+setInterval(nextSlide, 3000);
+
+// Click on dots to navigate
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+    });
+});
+
+// Initialize first slide
+if (screenshots.length > 0) {
+    showSlide(0);
 }
 
 // Parallax effect for hero section
