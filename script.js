@@ -56,8 +56,8 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all feature cards and tech cards
-document.querySelectorAll('.feature-card, .tech-card').forEach(card => {
+// Observe all feature cards and quality cards
+document.querySelectorAll('.feature-card, .quality-card').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px)';
     card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -113,17 +113,105 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Phone mockup animation
-const phoneScreen = document.querySelector('.phone-screen');
-if (phoneScreen) {
-    // Simulate app interaction
-    setInterval(() => {
-        const tabs = document.querySelectorAll('.tab');
-        const randomTab = tabs[Math.floor(Math.random() * tabs.length)];
+// Billboard-style slideshow functionality
+const screenshots = document.querySelectorAll('.app-screenshot');
+const dots = document.querySelectorAll('.dot');
+let currentSlide = 0;
+let isTransitioning = false;
+
+function showSlide(index) {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    
+    const previousSlide = currentSlide;
+    currentSlide = index;
+    
+    // Remove all transition classes
+    screenshots.forEach(screenshot => {
+        screenshot.classList.remove('entering', 'exiting', 'next');
+    });
+    
+    // Set up the new image to fade in
+    screenshots[currentSlide].classList.add('next');
+    
+    // Start crossfade transition
+    setTimeout(() => {
+        // Fade out current image
+        if (screenshots[previousSlide]) {
+            screenshots[previousSlide].classList.add('exiting');
+            screenshots[previousSlide].classList.remove('active');
+        }
         
-        tabs.forEach(tab => tab.classList.remove('active'));
-        randomTab.classList.add('active');
+        // Fade in new image
+        screenshots[currentSlide].classList.add('entering');
+        screenshots[currentSlide].classList.remove('next');
+        
+        // Complete transition
+        setTimeout(() => {
+            screenshots[currentSlide].classList.remove('entering');
+            screenshots[currentSlide].classList.add('active');
+            
+            // Clean up previous slide
+            if (screenshots[previousSlide]) {
+                screenshots[previousSlide].classList.remove('exiting');
+            }
+            
+            isTransitioning = false;
+        }, 1200);
+    }, 50);
+    
+    // Update dots
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentSlide].classList.add('active');
+}
+
+function nextSlide() {
+    const nextIndex = (currentSlide + 1) % screenshots.length;
+    showSlide(nextIndex);
+}
+
+// Auto-advance slides every 3 seconds with billboard effect
+let slideshowInterval = setInterval(() => {
+    if (!isTransitioning) {
+        nextSlide();
+    }
+}, 3000);
+
+// Click on dots to navigate
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        if (!isTransitioning && index !== currentSlide) {
+            showSlide(index);
+        }
+    });
+});
+
+// Add hover pause functionality
+const slideshowContainer = document.querySelector('.screenshot-slideshow');
+
+function startSlideshow() {
+    slideshowInterval = setInterval(() => {
+        if (!isTransitioning) {
+            nextSlide();
+        }
     }, 3000);
+}
+
+function pauseSlideshow() {
+    clearInterval(slideshowInterval);
+}
+
+// Pause on hover for better user experience
+if (slideshowContainer) {
+    slideshowContainer.addEventListener('mouseenter', pauseSlideshow);
+    slideshowContainer.addEventListener('mouseleave', startSlideshow);
+}
+
+// Initialize first slide with entrance animation
+if (screenshots.length > 0) {
+    setTimeout(() => {
+        screenshots[0].classList.add('active');
+    }, 500);
 }
 
 // Parallax effect for hero section

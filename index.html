@@ -13,15 +13,14 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <i class="fas fa-newspaper"></i>
+                <img src="images/app_logo.png" alt="Outline Logo" class="nav-logo-img">
                 <span>Outline</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#technology">Technology</a></li>
+                <li><a href="#quality">Quality</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -46,33 +45,20 @@
                         <i class="fab fa-apple"></i>
                         Coming Soon to App Store
                     </button>
-                    <button class="btn-secondary">
-                        <i class="fas fa-envelope"></i>
-                        Join Waitlist
-                    </button>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="phone-mockup">
                     <div class="phone-screen">
-                        <div class="app-header">
-                            <div class="category-tabs">
-                                <span class="tab active">All</span>
-                                <span class="tab">Business</span>
-                                <span class="tab">Technology</span>
-                                <span class="tab">Health</span>
-                            </div>
+                        <div class="screenshot-slideshow">
+                            <img src="images/screenshot.png" alt="Outline App Screenshot 1" class="app-screenshot active">
+                            <img src="images/screenshot_2.png" alt="Outline App Screenshot 2" class="app-screenshot">
+                            <img src="images/screenshot_3.png" alt="Outline App Screenshot 3" class="app-screenshot">
                         </div>
-                        <div class="article-card">
-                            <div class="article-image"></div>
-                            <div class="article-content">
-                                <h3>AI Breakthrough in Healthcare</h3>
-                                <p>New artificial intelligence system shows promising results in early disease detection...</p>
-                                <div class="article-meta">
-                                    <span class="source">TechCrunch</span>
-                                    <span class="time">2 hours ago</span>
-                                </div>
-                            </div>
+                        <div class="slideshow-dots">
+                            <span class="dot active" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                            <span class="dot" data-slide="2"></span>
                         </div>
                     </div>
                 </div>
@@ -97,7 +83,7 @@
                         <i class="fas fa-compress-alt"></i>
                     </div>
                     <h3>Intelligent Summaries</h3>
-                    <p>Each article is processed through OpenAI's GPT-3.5 to create concise, informative 55-65 word summaries.</p>
+                    <p>Each article is processed through advanced AI to create concise, informative 50-60 word summaries.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -131,38 +117,38 @@
         </div>
     </section>
 
-    <!-- Technology Section -->
-    <section id="technology" class="technology">
+    <!-- Quality & AI Section -->
+    <section id="quality" class="quality">
         <div class="container">
-            <h2 class="section-title">Built With Modern Technology</h2>
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fab fa-aws"></i>
+            <h2 class="section-title">Genuine News, Intelligently Delivered</h2>
+            <div class="quality-grid">
+                <div class="quality-card">
+                    <div class="quality-icon">
+                        <i class="fas fa-shield-check"></i>
                     </div>
-                    <h3>AWS Serverless</h3>
-                    <p>Built on AWS Lambda with serverless architecture for scalability and reliability.</p>
+                    <h3>Verified Sources Only</h3>
+                    <p>Every article comes from trusted, established news organizations with proven track records for accuracy and reliability.</p>
                 </div>
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-robot"></i>
+                <div class="quality-card">
+                    <div class="quality-icon">
+                        <i class="fas fa-brain"></i>
                     </div>
-                    <h3>OpenAI Integration</h3>
-                    <p>Powered by OpenAI's GPT-3.5 for intelligent content processing and summarization.</p>
+                    <h3>AI-Powered Summaries</h3>
+                    <p>Advanced artificial intelligence analyzes each article to create precise, informative summaries that capture the essential information in just 50-60 words.</p>
                 </div>
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fab fa-swift"></i>
+                <div class="quality-card">
+                    <div class="quality-icon">
+                        <i class="fas fa-filter"></i>
                     </div>
-                    <h3>SwiftUI</h3>
-                    <p>Native iOS app built with SwiftUI for optimal performance and modern user experience.</p>
+                    <h3>Smart Content Filtering</h3>
+                    <p>Our intelligent system automatically filters out clickbait, duplicate stories, and low-quality content, ensuring you only see what matters.</p>
                 </div>
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fab fa-docker"></i>
+                <div class="quality-card">
+                    <div class="quality-icon">
+                        <i class="fas fa-clock"></i>
                     </div>
-                    <h3>Docker Deployment</h3>
-                    <p>Automated CI/CD pipeline with Docker containers for seamless deployments.</p>
+                    <h3>Real-Time Processing</h3>
+                    <p>Breaking news is processed and summarized within minutes, so you stay informed without information overload or delays.</p>
                 </div>
             </div>
         </div>
@@ -171,74 +157,51 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About the Founder</h2>
+            <h2 class="section-title">Our Story</h2>
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        Outline was designed and developed entirely by me as the sole founder. From the initial concept 
-                        to the final implementation, every aspect of the platform has been built from the ground up.
+                        In today's information-saturated world, staying informed shouldn't mean drowning in endless articles. 
+                        Outline was born from the simple belief that quality news consumption should be effortless and intelligent.
                     </p>
                     <p>
-                        The backend infrastructure utilizes AWS Lambda functions for automated news fetching, 
-                        OpenAI integration for intelligent summarization, and a sophisticated S3 storage system 
-                        with deduplication and categorization.
+                        We recognized that busy professionals, students, and curious minds needed a better way to stay updated 
+                        without spending hours scrolling through repetitive headlines and clickbait content.
                     </p>
                     <p>
-                        The iOS application is built natively with SwiftUI, providing a seamless and intuitive 
-                        user experience. The personalization engine is designed to adapt to individual reading 
-                        patterns for a truly customized news experience.
+                        Our solution combines cutting-edge artificial intelligence with trusted journalism to deliver 
+                        exactly what you need to know, when you need to know it. Every feature is designed with one goal: 
+                        making you more informed in less time.
                     </p>
                 </div>
                 <div class="about-stats">
                     <div class="stat">
-                        <h3>5</h3>
-                        <p>News Categories</p>
+                        <h3>100+</h3>
+                        <p>Important Articles</p>
                     </div>
                     <div class="stat">
                         <h3>24/7</h3>
                         <p>Automated Processing</p>
                     </div>
                     <div class="stat">
-                        <h3>AI</h3>
-                        <p>Powered Summaries</p>
+                        <h3>50-60</h3>
+                        <p>Words Summary</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Ready to revolutionize your news reading experience?</h3>
-                    <p>Join the waitlist to be among the first to experience Outline when it launches on the App Store.</p>
-                    <div class="contact-buttons">
-                        <button class="btn-primary">
-                            <i class="fas fa-envelope"></i>
-                            Join Waitlist
-                        </button>
-                        <button class="btn-secondary">
-                            <i class="fab fa-github"></i>
-                            View on GitHub
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <i class="fas fa-newspaper"></i>
+                    <img src="images/app_logo.png" alt="Outline Logo" class="footer-logo-img">
                     <span>Outline</span>
                 </div>
-                <p>&copy; 2024 Outline. All rights reserved.</p>
+                <p>&copy; 2025 Outline. All rights reserved.</p>
             </div>
         </div>
     </footer>
