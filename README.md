@@ -1,14 +1,24 @@
-# Outline Website
+# Outline App - Product Website
 
-A modern, responsive website for the Outline news aggregation app. Built with HTML, CSS, and JavaScript to showcase the app's features and technology stack.
+A professional product showcase website for the **Outline iOS app** - an AI-powered news aggregation application. This website serves as the marketing landing page to promote the app and drive App Store downloads.
 
-## Features
+## Website Purpose
 
+This is a **product marketing website** that:
+- **Showcases** the Outline iOS app features and benefits
+- **Promotes** app downloads and user acquisition  
+- **Demonstrates** the app's value proposition through interactive elements
+- **Builds trust** with potential users through professional presentation
+- **Drives conversions** toward App Store downloads
+
+## Website Features
+
+- **Billboard Carousel**: Auto-rotating app screenshots every 3 seconds
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile
-- **Modern UI**: Clean, professional design matching the iOS app aesthetic
-- **Interactive Elements**: Smooth animations, hover effects, and mobile navigation
-- **Performance Optimized**: Fast loading with optimized assets
-- **SEO Ready**: Proper meta tags and semantic HTML structure
+- **Professional UI**: Clean design matching the iOS app branding
+- **Interactive Elements**: Smooth animations, hover effects, and navigation
+- **Performance Optimized**: Fast loading for better user experience
+- **SEO Ready**: Optimized for search engines and app discovery
 
 ## File Structure
 
@@ -68,13 +78,13 @@ The website uses your app's color scheme:
 2. Update the phone mockup in `index.html` with real images
 3. Replace placeholder content with actual app screenshots
 
-## Sections
+## Website Sections
 
-1. **Hero Section**: App introduction with phone mockup
-2. **Features**: 6 key features of your app
-3. **Technology**: AWS, OpenAI, SwiftUI, Docker
-4. **About**: Your story as the founder
-5. **Contact**: Waitlist signup and social links
+1. **Hero Section**: App introduction with billboard carousel of screenshots
+2. **Features**: 6 key features highlighting app benefits
+3. **Quality**: Focus on news authenticity and AI-powered summaries
+4. **Our Story**: Problem-solution narrative for the app's creation
+5. **Footer**: Simple branding and copyright information
 
 ## Browser Support
 
@@ -90,14 +100,14 @@ The website uses your app's color scheme:
 - **Load Time**: < 2 seconds
 - **File Size**: < 500KB total
 
-## Next Steps
+## Marketing & Optimization
 
-1. **Add Real Content**: Replace placeholder text with your actual app details
-2. **Add Screenshots**: Include real app screenshots and mockups
-3. **Add Analytics**: Integrate Google Analytics or similar
-4. **Add Contact Form**: Implement actual waitlist functionality
-5. **Add Blog**: Consider adding a tech blog section
-6. **SEO Optimization**: Add more meta tags and structured data
+1. **Analytics**: Add Google Analytics to track visitor behavior
+2. **SEO**: Optimize for app-related keywords and App Store discovery
+3. **Social Media**: Link to social profiles and enable sharing
+4. **A/B Testing**: Test different hero messages and call-to-actions
+5. **Performance**: Monitor loading times and user engagement
+6. **App Store Integration**: Add deep links when app launches
 
 ## Contact
 
